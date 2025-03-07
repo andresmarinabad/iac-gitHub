@@ -34,7 +34,7 @@ resource "github_repository" "iac-github" {
   topics = ["terraform", "github", "repo"]
 
   lifecycle {
-    prevent_destroy = false
+    prevent_destroy = true
   }
 
 }
