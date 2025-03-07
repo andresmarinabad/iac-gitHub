@@ -1,5 +1,8 @@
 # iac-github
 
+![Static Badge](https://img.shields.io/badge/terraform-v1.11-purple)
+
+
 ## Overview
 
 `iac-github` is a Terraform project that integrates with the GitHub provider to create and manage repositories both in your personal account and a shared account. It utilizes a GitHub personal access token (PAT) for authentication and resource management.
