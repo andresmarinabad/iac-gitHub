@@ -80,3 +80,42 @@ resource "github_repository" "fotosblog" {
   topics                      = ["terraform", "python", "webscraping"]
 
 }
+
+resource "github_repository" "photocalendar" {
+  provider = github.andres
+
+  name = "photocalendar"
+  description = "Create an A3 pdf photo canlendar with python and LaTeX"
+
+  visibility = "public"
+
+  allow_auto_merge            = true
+  allow_merge_commit          = false
+  allow_rebase_merge          = true
+  allow_squash_merge          = true
+  allow_update_branch         = false
+  archived                    = false
+  auto_init                   = true
+  delete_branch_on_merge      = false
+  has_discussions             = false
+  has_downloads               = false
+  has_issues                  = false
+  has_projects                = false
+  has_wiki                    = false
+
+  license_template = "mit"
+
+  is_template                 = true
+  merge_commit_message        = "PR_TITLE"
+  merge_commit_title          = "MERGE_MESSAGE"
+
+  squash_merge_commit_message = "COMMIT_MESSAGES"
+  squash_merge_commit_title   = "COMMIT_OR_PR_TITLE"
+
+  lifecycle {
+    prevent_destroy = true
+  }
+
+  topics                      = ["terraform", "python", "latex"]
+
+}
